@@ -1,26 +1,64 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { CreateCompanyDto } from './dto/create-company.dto';
 import { UpdateCompanyDto } from './dto/update-company.dto';
+import { PrismaService } from 'src/database/prisma.service';
 
 @Injectable()
 export class CompaniesService {
-  create(createCompanyDto: CreateCompanyDto) {
-    return 'This action adds a new company';
+  constructor(private readonly prisma: PrismaService) {}
+
+  private readonly logger = new Logger(CompaniesService.name);
+  async create(createCompanyDto: CreateCompanyDto) {
+    try {
+      return await this.prisma.company.create({
+        data: createCompanyDto,
+      });
+    } catch (error) {
+      this.logger.error('Error creating company:', error);
+      throw new Error('Failed to create company');
+    }
   }
 
-  findAll() {
-    return `This action returns all companies`;
+  async findAll() {
+    try {
+      return await this.prisma.company.findMany();
+    } catch (error) {
+      this.logger.error('Error fetching companies:', error);
+      throw new Error('Failed to fetch companies');
+    }
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} company`;
+  async findOne(id: number) {
+    try {
+      return await this.prisma.company.findUnique({
+        where: { id },
+      });
+    } catch (error) {
+      this.logger.error(`Error fetching company with id ${id}:`, error);
+      throw new Error(`Failed to fetch company with id ${id}`);
+    }
   }
 
-  update(id: number, updateCompanyDto: UpdateCompanyDto) {
-    return `This action updates a #${id} company`;
+  async update(id: number, updateCompanyDto: UpdateCompanyDto) {
+    try {
+      return await this.prisma.company.update({
+        where: { id },
+        data: updateCompanyDto,
+      });
+    } catch (error) {
+      this.logger.error(`Error updating company with id ${id}:`, error);
+      throw new Error(`Failed to update company with id ${id}`);
+    }
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} company`;
+  async remove(id: number) {
+    try {
+      return await this.prisma.company.delete({
+        where: { id },
+      });
+    } catch (error) {
+      this.logger.error(`Error deleting company with id ${id}:`, error);
+      throw new Error(`Failed to delete company with id ${id}`);
+    }
   }
 }
