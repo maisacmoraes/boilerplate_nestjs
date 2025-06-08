@@ -18,31 +18,3 @@ services:
       retries: 5
       start_period: 30s
   
-  api:
-    image: boilerplate-nestjs
-    build:
-      context: .
-      dockerfile: Dockerfile
-    env_file:
-      - ./.env
-    ports:
-      - '3001:3001'
-    volumes:
-      - .:/usr/src/app
-    depends_on:
-      postgres:
-        condition: service_healthy
-    networks:
-      - boilerplate-nestjs
-    command: ["sh", "./entrypoint.sh"]
-
-
-networks:
-  boilerplate-nestjs:
-    driver: bridge
-    external: true
-
-volumes:
-  postgres:
-    driver: local
- 
