@@ -1,0 +1,12 @@
+node_modules
+dist
+Dockerfile
+npm-debug.log
+yarn.lock
+.cache
+.github
+.dockerignore
+.git
+.gitignore
+.env
+.env.*
