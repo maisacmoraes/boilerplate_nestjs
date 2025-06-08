@@ -1,10 +1,15 @@
+import { Prisma } from '@prisma/client';
 import { Company_Product } from 'generated/prisma';
 
-export class Company {
-  id: string;
+export class Company implements Prisma.CompanyUncheckedCreateInput {
+  id?: number | undefined;
   name: string;
   document: string;
   email: string;
   phone: string;
-  products?: Company_Product[];
+  createdAt?: string | Date | undefined;
+  updatedAt?: string | Date | undefined;
+  companyProduct?:
+    | Prisma.Company_ProductUncheckedCreateNestedManyWithoutCompanyInput
+    | undefined;
 }

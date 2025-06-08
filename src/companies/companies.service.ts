@@ -1,13 +1,14 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { CreateCompanyDto } from './dto/create-company.dto';
 import { UpdateCompanyDto } from './dto/update-company.dto';
-import { PrismaService } from 'src/database/prisma.service';
+import { PrismaService } from '../database/prisma.service';
 
 @Injectable()
 export class CompaniesService {
   constructor(private readonly prisma: PrismaService) {}
 
   private readonly logger = new Logger(CompaniesService.name);
+
   async create(createCompanyDto: CreateCompanyDto) {
     try {
       return await this.prisma.company.create({
