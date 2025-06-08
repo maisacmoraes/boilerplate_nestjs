@@ -2,7 +2,7 @@
   "name": "nest-app",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Maisa Moraes",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -71,5 +71,10 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seeds/messages.seed.ts",
+    "studio": "npx prisma studio",
+    "reset": "npx prisma migrate reset"
   }
 }

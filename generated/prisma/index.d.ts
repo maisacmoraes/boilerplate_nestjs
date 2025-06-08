@@ -1051,11 +1051,11 @@ export namespace Prisma {
    */
 
   export type CompanyCountOutputType = {
-    Companny_Product: number
+    companyProduct: number
   }
 
   export type CompanyCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    Companny_Product?: boolean | CompanyCountOutputTypeCountCompanny_ProductArgs
+    companyProduct?: boolean | CompanyCountOutputTypeCountCompanyProductArgs
   }
 
   // Custom InputTypes
@@ -1072,7 +1072,7 @@ export namespace Prisma {
   /**
    * CompanyCountOutputType without action
    */
-  export type CompanyCountOutputTypeCountCompanny_ProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type CompanyCountOutputTypeCountCompanyProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: Company_ProductWhereInput
   }
 
@@ -1082,11 +1082,11 @@ export namespace Prisma {
    */
 
   export type ProductCountOutputType = {
-    Companny_Product: number
+    companyProduct: number
   }
 
   export type ProductCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    Companny_Product?: boolean | ProductCountOutputTypeCountCompanny_ProductArgs
+    companyProduct?: boolean | ProductCountOutputTypeCountCompanyProductArgs
   }
 
   // Custom InputTypes
@@ -1103,7 +1103,7 @@ export namespace Prisma {
   /**
    * ProductCountOutputType without action
    */
-  export type ProductCountOutputTypeCountCompanny_ProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type ProductCountOutputTypeCountCompanyProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     where?: Company_ProductWhereInput
   }
 
@@ -1326,7 +1326,7 @@ export namespace Prisma {
     phone?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    Companny_Product?: boolean | Company$Companny_ProductArgs<ExtArgs>
+    companyProduct?: boolean | Company$companyProductArgs<ExtArgs>
     _count?: boolean | CompanyCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["company"]>
 
@@ -1362,7 +1362,7 @@ export namespace Prisma {
 
   export type CompanyOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "document" | "email" | "phone" | "createdAt" | "updatedAt", ExtArgs["result"]["company"]>
   export type CompanyInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    Companny_Product?: boolean | Company$Companny_ProductArgs<ExtArgs>
+    companyProduct?: boolean | Company$companyProductArgs<ExtArgs>
     _count?: boolean | CompanyCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type CompanyIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -1371,7 +1371,7 @@ export namespace Prisma {
   export type $CompanyPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Company"
     objects: {
-      Companny_Product: Prisma.$Company_ProductPayload<ExtArgs>[]
+      companyProduct: Prisma.$Company_ProductPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -1775,7 +1775,7 @@ export namespace Prisma {
    */
   export interface Prisma__CompanyClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    Companny_Product<T extends Company$Companny_ProductArgs<ExtArgs> = {}>(args?: Subset<T, Company$Companny_ProductArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Company_ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    companyProduct<T extends Company$companyProductArgs<ExtArgs> = {}>(args?: Subset<T, Company$companyProductArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Company_ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2200,9 +2200,9 @@ export namespace Prisma {
   }
 
   /**
-   * Company.Companny_Product
+   * Company.companyProduct
    */
-  export type Company$Companny_ProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Company$companyProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Select specific fields to fetch from the Company_Product
      */
@@ -2256,13 +2256,13 @@ export namespace Prisma {
 
   export type ProductAvgAggregateOutputType = {
     id: number | null
-    base_price: number | null
+    base_price: Decimal | null
     stock: number | null
   }
 
   export type ProductSumAggregateOutputType = {
     id: number | null
-    base_price: number | null
+    base_price: Decimal | null
     stock: number | null
   }
 
@@ -2270,7 +2270,7 @@ export namespace Prisma {
     id: number | null
     name: string | null
     description: string | null
-    base_price: number | null
+    base_price: Decimal | null
     stock: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -2280,7 +2280,7 @@ export namespace Prisma {
     id: number | null
     name: string | null
     description: string | null
-    base_price: number | null
+    base_price: Decimal | null
     stock: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -2431,7 +2431,7 @@ export namespace Prisma {
     id: number
     name: string
     description: string
-    base_price: number
+    base_price: Decimal
     stock: number
     createdAt: Date
     updatedAt: Date
@@ -2464,7 +2464,7 @@ export namespace Prisma {
     stock?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    Companny_Product?: boolean | Product$Companny_ProductArgs<ExtArgs>
+    companyProduct?: boolean | Product$companyProductArgs<ExtArgs>
     _count?: boolean | ProductCountOutputTypeDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["product"]>
 
@@ -2500,7 +2500,7 @@ export namespace Prisma {
 
   export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "base_price" | "stock" | "createdAt" | "updatedAt", ExtArgs["result"]["product"]>
   export type ProductInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    Companny_Product?: boolean | Product$Companny_ProductArgs<ExtArgs>
+    companyProduct?: boolean | Product$companyProductArgs<ExtArgs>
     _count?: boolean | ProductCountOutputTypeDefaultArgs<ExtArgs>
   }
   export type ProductIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
@@ -2509,13 +2509,13 @@ export namespace Prisma {
   export type $ProductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Product"
     objects: {
-      Companny_Product: Prisma.$Company_ProductPayload<ExtArgs>[]
+      companyProduct: Prisma.$Company_ProductPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
       name: string
       description: string
-      base_price: number
+      base_price: Prisma.Decimal
       stock: number
       createdAt: Date
       updatedAt: Date
@@ -2913,7 +2913,7 @@ export namespace Prisma {
    */
   export interface Prisma__ProductClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    Companny_Product<T extends Product$Companny_ProductArgs<ExtArgs> = {}>(args?: Subset<T, Product$Companny_ProductArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Company_ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    companyProduct<T extends Product$companyProductArgs<ExtArgs> = {}>(args?: Subset<T, Product$companyProductArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$Company_ProductPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -2946,7 +2946,7 @@ export namespace Prisma {
     readonly id: FieldRef<"Product", 'Int'>
     readonly name: FieldRef<"Product", 'String'>
     readonly description: FieldRef<"Product", 'String'>
-    readonly base_price: FieldRef<"Product", 'Float'>
+    readonly base_price: FieldRef<"Product", 'Decimal'>
     readonly stock: FieldRef<"Product", 'Int'>
     readonly createdAt: FieldRef<"Product", 'DateTime'>
     readonly updatedAt: FieldRef<"Product", 'DateTime'>
@@ -3338,9 +3338,9 @@ export namespace Prisma {
   }
 
   /**
-   * Product.Companny_Product
+   * Product.companyProduct
    */
-  export type Product$Companny_ProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type Product$companyProductArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
      * Select specific fields to fetch from the Company_Product
      */
@@ -3394,39 +3394,39 @@ export namespace Prisma {
 
   export type Company_ProductAvgAggregateOutputType = {
     id: number | null
-    compannyId: number | null
+    companyId: number | null
     productId: number | null
-    price: number | null
+    price: Decimal | null
   }
 
   export type Company_ProductSumAggregateOutputType = {
     id: number | null
-    compannyId: number | null
+    companyId: number | null
     productId: number | null
-    price: number | null
+    price: Decimal | null
   }
 
   export type Company_ProductMinAggregateOutputType = {
     id: number | null
-    compannyId: number | null
+    companyId: number | null
     productId: number | null
-    price: number | null
+    price: Decimal | null
     createdAt: Date | null
     updatedAt: Date | null
   }
 
   export type Company_ProductMaxAggregateOutputType = {
     id: number | null
-    compannyId: number | null
+    companyId: number | null
     productId: number | null
-    price: number | null
+    price: Decimal | null
     createdAt: Date | null
     updatedAt: Date | null
   }
 
   export type Company_ProductCountAggregateOutputType = {
     id: number
-    compannyId: number
+    companyId: number
     productId: number
     price: number
     createdAt: number
@@ -3437,21 +3437,21 @@ export namespace Prisma {
 
   export type Company_ProductAvgAggregateInputType = {
     id?: true
-    compannyId?: true
+    companyId?: true
     productId?: true
     price?: true
   }
 
   export type Company_ProductSumAggregateInputType = {
     id?: true
-    compannyId?: true
+    companyId?: true
     productId?: true
     price?: true
   }
 
   export type Company_ProductMinAggregateInputType = {
     id?: true
-    compannyId?: true
+    companyId?: true
     productId?: true
     price?: true
     createdAt?: true
@@ -3460,7 +3460,7 @@ export namespace Prisma {
 
   export type Company_ProductMaxAggregateInputType = {
     id?: true
-    compannyId?: true
+    companyId?: true
     productId?: true
     price?: true
     createdAt?: true
@@ -3469,7 +3469,7 @@ export namespace Prisma {
 
   export type Company_ProductCountAggregateInputType = {
     id?: true
-    compannyId?: true
+    companyId?: true
     productId?: true
     price?: true
     createdAt?: true
@@ -3565,9 +3565,9 @@ export namespace Prisma {
 
   export type Company_ProductGroupByOutputType = {
     id: number
-    compannyId: number
+    companyId: number
     productId: number
-    price: number
+    price: Decimal
     createdAt: Date
     updatedAt: Date
     _count: Company_ProductCountAggregateOutputType | null
@@ -3593,71 +3593,71 @@ export namespace Prisma {
 
   export type Company_ProductSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    compannyId?: boolean
+    companyId?: boolean
     productId?: boolean
     price?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    companny?: boolean | CompanyDefaultArgs<ExtArgs>
+    company?: boolean | CompanyDefaultArgs<ExtArgs>
     product?: boolean | ProductDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["company_Product"]>
 
   export type Company_ProductSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    compannyId?: boolean
+    companyId?: boolean
     productId?: boolean
     price?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    companny?: boolean | CompanyDefaultArgs<ExtArgs>
+    company?: boolean | CompanyDefaultArgs<ExtArgs>
     product?: boolean | ProductDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["company_Product"]>
 
   export type Company_ProductSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
-    compannyId?: boolean
+    companyId?: boolean
     productId?: boolean
     price?: boolean
     createdAt?: boolean
     updatedAt?: boolean
-    companny?: boolean | CompanyDefaultArgs<ExtArgs>
+    company?: boolean | CompanyDefaultArgs<ExtArgs>
     product?: boolean | ProductDefaultArgs<ExtArgs>
   }, ExtArgs["result"]["company_Product"]>
 
   export type Company_ProductSelectScalar = {
     id?: boolean
-    compannyId?: boolean
+    companyId?: boolean
     productId?: boolean
     price?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type Company_ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "compannyId" | "productId" | "price" | "createdAt" | "updatedAt", ExtArgs["result"]["company_Product"]>
+  export type Company_ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "companyId" | "productId" | "price" | "createdAt" | "updatedAt", ExtArgs["result"]["company_Product"]>
   export type Company_ProductInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    companny?: boolean | CompanyDefaultArgs<ExtArgs>
+    company?: boolean | CompanyDefaultArgs<ExtArgs>
     product?: boolean | ProductDefaultArgs<ExtArgs>
   }
   export type Company_ProductIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    companny?: boolean | CompanyDefaultArgs<ExtArgs>
+    company?: boolean | CompanyDefaultArgs<ExtArgs>
     product?: boolean | ProductDefaultArgs<ExtArgs>
   }
   export type Company_ProductIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    companny?: boolean | CompanyDefaultArgs<ExtArgs>
+    company?: boolean | CompanyDefaultArgs<ExtArgs>
     product?: boolean | ProductDefaultArgs<ExtArgs>
   }
 
   export type $Company_ProductPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     name: "Company_Product"
     objects: {
-      companny: Prisma.$CompanyPayload<ExtArgs>
+      company: Prisma.$CompanyPayload<ExtArgs>
       product: Prisma.$ProductPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
-      compannyId: number
+      companyId: number
       productId: number
-      price: number
+      price: Prisma.Decimal
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["company_Product"]>
@@ -4054,7 +4054,7 @@ export namespace Prisma {
    */
   export interface Prisma__Company_ProductClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    companny<T extends CompanyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CompanyDefaultArgs<ExtArgs>>): Prisma__CompanyClient<$Result.GetResult<Prisma.$CompanyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    company<T extends CompanyDefaultArgs<ExtArgs> = {}>(args?: Subset<T, CompanyDefaultArgs<ExtArgs>>): Prisma__CompanyClient<$Result.GetResult<Prisma.$CompanyPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     product<T extends ProductDefaultArgs<ExtArgs> = {}>(args?: Subset<T, ProductDefaultArgs<ExtArgs>>): Prisma__ProductClient<$Result.GetResult<Prisma.$ProductPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -4086,9 +4086,9 @@ export namespace Prisma {
    */
   interface Company_ProductFieldRefs {
     readonly id: FieldRef<"Company_Product", 'Int'>
-    readonly compannyId: FieldRef<"Company_Product", 'Int'>
+    readonly companyId: FieldRef<"Company_Product", 'Int'>
     readonly productId: FieldRef<"Company_Product", 'Int'>
-    readonly price: FieldRef<"Company_Product", 'Float'>
+    readonly price: FieldRef<"Company_Product", 'Decimal'>
     readonly createdAt: FieldRef<"Company_Product", 'DateTime'>
     readonly updatedAt: FieldRef<"Company_Product", 'DateTime'>
   }
@@ -4547,7 +4547,7 @@ export namespace Prisma {
 
   export const Company_ProductScalarFieldEnum: {
     id: 'id',
-    compannyId: 'compannyId',
+    companyId: 'companyId',
     productId: 'productId',
     price: 'price',
     createdAt: 'createdAt',
@@ -4621,6 +4621,20 @@ export namespace Prisma {
 
 
   /**
+   * Reference to a field of type 'Decimal'
+   */
+  export type DecimalFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Decimal'>
+    
+
+
+  /**
+   * Reference to a field of type 'Decimal[]'
+   */
+  export type ListDecimalFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Decimal[]'>
+    
+
+
+  /**
    * Reference to a field of type 'Float'
    */
   export type FloatFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Float'>
@@ -4648,7 +4662,7 @@ export namespace Prisma {
     phone?: StringFilter<"Company"> | string
     createdAt?: DateTimeFilter<"Company"> | Date | string
     updatedAt?: DateTimeFilter<"Company"> | Date | string
-    Companny_Product?: Company_ProductListRelationFilter
+    companyProduct?: Company_ProductListRelationFilter
   }
 
   export type CompanyOrderByWithRelationInput = {
@@ -4659,7 +4673,7 @@ export namespace Prisma {
     phone?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    Companny_Product?: Company_ProductOrderByRelationAggregateInput
+    companyProduct?: Company_ProductOrderByRelationAggregateInput
   }
 
   export type CompanyWhereUniqueInput = Prisma.AtLeast<{
@@ -4673,7 +4687,7 @@ export namespace Prisma {
     phone?: StringFilter<"Company"> | string
     createdAt?: DateTimeFilter<"Company"> | Date | string
     updatedAt?: DateTimeFilter<"Company"> | Date | string
-    Companny_Product?: Company_ProductListRelationFilter
+    companyProduct?: Company_ProductListRelationFilter
   }, "id">
 
   export type CompanyOrderByWithAggregationInput = {
@@ -4711,11 +4725,11 @@ export namespace Prisma {
     id?: IntFilter<"Product"> | number
     name?: StringFilter<"Product"> | string
     description?: StringFilter<"Product"> | string
-    base_price?: FloatFilter<"Product"> | number
+    base_price?: DecimalFilter<"Product"> | Decimal | DecimalJsLike | number | string
     stock?: IntFilter<"Product"> | number
     createdAt?: DateTimeFilter<"Product"> | Date | string
     updatedAt?: DateTimeFilter<"Product"> | Date | string
-    Companny_Product?: Company_ProductListRelationFilter
+    companyProduct?: Company_ProductListRelationFilter
   }
 
   export type ProductOrderByWithRelationInput = {
@@ -4726,7 +4740,7 @@ export namespace Prisma {
     stock?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    Companny_Product?: Company_ProductOrderByRelationAggregateInput
+    companyProduct?: Company_ProductOrderByRelationAggregateInput
   }
 
   export type ProductWhereUniqueInput = Prisma.AtLeast<{
@@ -4736,11 +4750,11 @@ export namespace Prisma {
     NOT?: ProductWhereInput | ProductWhereInput[]
     name?: StringFilter<"Product"> | string
     description?: StringFilter<"Product"> | string
-    base_price?: FloatFilter<"Product"> | number
+    base_price?: DecimalFilter<"Product"> | Decimal | DecimalJsLike | number | string
     stock?: IntFilter<"Product"> | number
     createdAt?: DateTimeFilter<"Product"> | Date | string
     updatedAt?: DateTimeFilter<"Product"> | Date | string
-    Companny_Product?: Company_ProductListRelationFilter
+    companyProduct?: Company_ProductListRelationFilter
   }, "id">
 
   export type ProductOrderByWithAggregationInput = {
@@ -4765,7 +4779,7 @@ export namespace Prisma {
     id?: IntWithAggregatesFilter<"Product"> | number
     name?: StringWithAggregatesFilter<"Product"> | string
     description?: StringWithAggregatesFilter<"Product"> | string
-    base_price?: FloatWithAggregatesFilter<"Product"> | number
+    base_price?: DecimalWithAggregatesFilter<"Product"> | Decimal | DecimalJsLike | number | string
     stock?: IntWithAggregatesFilter<"Product"> | number
     createdAt?: DateTimeWithAggregatesFilter<"Product"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Product"> | Date | string
@@ -4776,23 +4790,23 @@ export namespace Prisma {
     OR?: Company_ProductWhereInput[]
     NOT?: Company_ProductWhereInput | Company_ProductWhereInput[]
     id?: IntFilter<"Company_Product"> | number
-    compannyId?: IntFilter<"Company_Product"> | number
+    companyId?: IntFilter<"Company_Product"> | number
     productId?: IntFilter<"Company_Product"> | number
-    price?: FloatFilter<"Company_Product"> | number
+    price?: DecimalFilter<"Company_Product"> | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFilter<"Company_Product"> | Date | string
     updatedAt?: DateTimeFilter<"Company_Product"> | Date | string
-    companny?: XOR<CompanyScalarRelationFilter, CompanyWhereInput>
+    company?: XOR<CompanyScalarRelationFilter, CompanyWhereInput>
     product?: XOR<ProductScalarRelationFilter, ProductWhereInput>
   }
 
   export type Company_ProductOrderByWithRelationInput = {
     id?: SortOrder
-    compannyId?: SortOrder
+    companyId?: SortOrder
     productId?: SortOrder
     price?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
-    companny?: CompanyOrderByWithRelationInput
+    company?: CompanyOrderByWithRelationInput
     product?: ProductOrderByWithRelationInput
   }
 
@@ -4801,18 +4815,18 @@ export namespace Prisma {
     AND?: Company_ProductWhereInput | Company_ProductWhereInput[]
     OR?: Company_ProductWhereInput[]
     NOT?: Company_ProductWhereInput | Company_ProductWhereInput[]
-    compannyId?: IntFilter<"Company_Product"> | number
+    companyId?: IntFilter<"Company_Product"> | number
     productId?: IntFilter<"Company_Product"> | number
-    price?: FloatFilter<"Company_Product"> | number
+    price?: DecimalFilter<"Company_Product"> | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFilter<"Company_Product"> | Date | string
     updatedAt?: DateTimeFilter<"Company_Product"> | Date | string
-    companny?: XOR<CompanyScalarRelationFilter, CompanyWhereInput>
+    company?: XOR<CompanyScalarRelationFilter, CompanyWhereInput>
     product?: XOR<ProductScalarRelationFilter, ProductWhereInput>
   }, "id">
 
   export type Company_ProductOrderByWithAggregationInput = {
     id?: SortOrder
-    compannyId?: SortOrder
+    companyId?: SortOrder
     productId?: SortOrder
     price?: SortOrder
     createdAt?: SortOrder
@@ -4829,9 +4843,9 @@ export namespace Prisma {
     OR?: Company_ProductScalarWhereWithAggregatesInput[]
     NOT?: Company_ProductScalarWhereWithAggregatesInput | Company_ProductScalarWhereWithAggregatesInput[]
     id?: IntWithAggregatesFilter<"Company_Product"> | number
-    compannyId?: IntWithAggregatesFilter<"Company_Product"> | number
+    companyId?: IntWithAggregatesFilter<"Company_Product"> | number
     productId?: IntWithAggregatesFilter<"Company_Product"> | number
-    price?: FloatWithAggregatesFilter<"Company_Product"> | number
+    price?: DecimalWithAggregatesFilter<"Company_Product"> | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeWithAggregatesFilter<"Company_Product"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Company_Product"> | Date | string
   }
@@ -4843,7 +4857,7 @@ export namespace Prisma {
     phone: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    Companny_Product?: Company_ProductCreateNestedManyWithoutCompannyInput
+    companyProduct?: Company_ProductCreateNestedManyWithoutCompanyInput
   }
 
   export type CompanyUncheckedCreateInput = {
@@ -4854,7 +4868,7 @@ export namespace Prisma {
     phone: string
     createdAt?: Date | string
     updatedAt?: Date | string
-    Companny_Product?: Company_ProductUncheckedCreateNestedManyWithoutCompannyInput
+    companyProduct?: Company_ProductUncheckedCreateNestedManyWithoutCompanyInput
   }
 
   export type CompanyUpdateInput = {
@@ -4864,7 +4878,7 @@ export namespace Prisma {
     phone?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    Companny_Product?: Company_ProductUpdateManyWithoutCompannyNestedInput
+    companyProduct?: Company_ProductUpdateManyWithoutCompanyNestedInput
   }
 
   export type CompanyUncheckedUpdateInput = {
@@ -4875,7 +4889,7 @@ export namespace Prisma {
     phone?: StringFieldUpdateOperationsInput | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    Companny_Product?: Company_ProductUncheckedUpdateManyWithoutCompannyNestedInput
+    companyProduct?: Company_ProductUncheckedUpdateManyWithoutCompanyNestedInput
   }
 
   export type CompanyCreateManyInput = {
@@ -4910,50 +4924,50 @@ export namespace Prisma {
   export type ProductCreateInput = {
     name: string
     description: string
-    base_price: number
+    base_price: Decimal | DecimalJsLike | number | string
     stock: number
     createdAt?: Date | string
     updatedAt?: Date | string
-    Companny_Product?: Company_ProductCreateNestedManyWithoutProductInput
+    companyProduct?: Company_ProductCreateNestedManyWithoutProductInput
   }
 
   export type ProductUncheckedCreateInput = {
     id?: number
     name: string
     description: string
-    base_price: number
+    base_price: Decimal | DecimalJsLike | number | string
     stock: number
     createdAt?: Date | string
     updatedAt?: Date | string
-    Companny_Product?: Company_ProductUncheckedCreateNestedManyWithoutProductInput
+    companyProduct?: Company_ProductUncheckedCreateNestedManyWithoutProductInput
   }
 
   export type ProductUpdateInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    base_price?: FloatFieldUpdateOperationsInput | number
+    base_price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     stock?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    Companny_Product?: Company_ProductUpdateManyWithoutProductNestedInput
+    companyProduct?: Company_ProductUpdateManyWithoutProductNestedInput
   }
 
   export type ProductUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    base_price?: FloatFieldUpdateOperationsInput | number
+    base_price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     stock?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    Companny_Product?: Company_ProductUncheckedUpdateManyWithoutProductNestedInput
+    companyProduct?: Company_ProductUncheckedUpdateManyWithoutProductNestedInput
   }
 
   export type ProductCreateManyInput = {
     id?: number
     name: string
     description: string
-    base_price: number
+    base_price: Decimal | DecimalJsLike | number | string
     stock: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -4962,7 +4976,7 @@ export namespace Prisma {
   export type ProductUpdateManyMutationInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    base_price?: FloatFieldUpdateOperationsInput | number
+    base_price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     stock?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -4972,66 +4986,66 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    base_price?: FloatFieldUpdateOperationsInput | number
+    base_price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     stock?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type Company_ProductCreateInput = {
-    price: number
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
-    companny: CompanyCreateNestedOneWithoutCompanny_ProductInput
-    product: ProductCreateNestedOneWithoutCompanny_ProductInput
+    company: CompanyCreateNestedOneWithoutCompanyProductInput
+    product: ProductCreateNestedOneWithoutCompanyProductInput
   }
 
   export type Company_ProductUncheckedCreateInput = {
     id?: number
-    compannyId: number
+    companyId: number
     productId: number
-    price: number
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type Company_ProductUpdateInput = {
-    price?: FloatFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    companny?: CompanyUpdateOneRequiredWithoutCompanny_ProductNestedInput
-    product?: ProductUpdateOneRequiredWithoutCompanny_ProductNestedInput
+    company?: CompanyUpdateOneRequiredWithoutCompanyProductNestedInput
+    product?: ProductUpdateOneRequiredWithoutCompanyProductNestedInput
   }
 
   export type Company_ProductUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
-    compannyId?: IntFieldUpdateOperationsInput | number
+    companyId?: IntFieldUpdateOperationsInput | number
     productId?: IntFieldUpdateOperationsInput | number
-    price?: FloatFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type Company_ProductCreateManyInput = {
     id?: number
-    compannyId: number
+    companyId: number
     productId: number
-    price: number
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type Company_ProductUpdateManyMutationInput = {
-    price?: FloatFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type Company_ProductUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
-    compannyId?: IntFieldUpdateOperationsInput | number
+    companyId?: IntFieldUpdateOperationsInput | number
     productId?: IntFieldUpdateOperationsInput | number
-    price?: FloatFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -5169,15 +5183,15 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type FloatFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatFilter<$PrismaModel> | number
+  export type DecimalFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string
   }
 
   export type ProductCountOrderByAggregateInput = {
@@ -5222,20 +5236,20 @@ export namespace Prisma {
     stock?: SortOrder
   }
 
-  export type FloatWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
+  export type DecimalWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalWithAggregatesFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string
     _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedFloatFilter<$PrismaModel>
-    _min?: NestedFloatFilter<$PrismaModel>
-    _max?: NestedFloatFilter<$PrismaModel>
+    _avg?: NestedDecimalFilter<$PrismaModel>
+    _sum?: NestedDecimalFilter<$PrismaModel>
+    _min?: NestedDecimalFilter<$PrismaModel>
+    _max?: NestedDecimalFilter<$PrismaModel>
   }
 
   export type CompanyScalarRelationFilter = {
@@ -5250,7 +5264,7 @@ export namespace Prisma {
 
   export type Company_ProductCountOrderByAggregateInput = {
     id?: SortOrder
-    compannyId?: SortOrder
+    companyId?: SortOrder
     productId?: SortOrder
     price?: SortOrder
     createdAt?: SortOrder
@@ -5259,14 +5273,14 @@ export namespace Prisma {
 
   export type Company_ProductAvgOrderByAggregateInput = {
     id?: SortOrder
-    compannyId?: SortOrder
+    companyId?: SortOrder
     productId?: SortOrder
     price?: SortOrder
   }
 
   export type Company_ProductMaxOrderByAggregateInput = {
     id?: SortOrder
-    compannyId?: SortOrder
+    companyId?: SortOrder
     productId?: SortOrder
     price?: SortOrder
     createdAt?: SortOrder
@@ -5275,7 +5289,7 @@ export namespace Prisma {
 
   export type Company_ProductMinOrderByAggregateInput = {
     id?: SortOrder
-    compannyId?: SortOrder
+    companyId?: SortOrder
     productId?: SortOrder
     price?: SortOrder
     createdAt?: SortOrder
@@ -5284,22 +5298,22 @@ export namespace Prisma {
 
   export type Company_ProductSumOrderByAggregateInput = {
     id?: SortOrder
-    compannyId?: SortOrder
+    companyId?: SortOrder
     productId?: SortOrder
     price?: SortOrder
   }
 
-  export type Company_ProductCreateNestedManyWithoutCompannyInput = {
-    create?: XOR<Company_ProductCreateWithoutCompannyInput, Company_ProductUncheckedCreateWithoutCompannyInput> | Company_ProductCreateWithoutCompannyInput[] | Company_ProductUncheckedCreateWithoutCompannyInput[]
-    connectOrCreate?: Company_ProductCreateOrConnectWithoutCompannyInput | Company_ProductCreateOrConnectWithoutCompannyInput[]
-    createMany?: Company_ProductCreateManyCompannyInputEnvelope
+  export type Company_ProductCreateNestedManyWithoutCompanyInput = {
+    create?: XOR<Company_ProductCreateWithoutCompanyInput, Company_ProductUncheckedCreateWithoutCompanyInput> | Company_ProductCreateWithoutCompanyInput[] | Company_ProductUncheckedCreateWithoutCompanyInput[]
+    connectOrCreate?: Company_ProductCreateOrConnectWithoutCompanyInput | Company_ProductCreateOrConnectWithoutCompanyInput[]
+    createMany?: Company_ProductCreateManyCompanyInputEnvelope
     connect?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
   }
 
-  export type Company_ProductUncheckedCreateNestedManyWithoutCompannyInput = {
-    create?: XOR<Company_ProductCreateWithoutCompannyInput, Company_ProductUncheckedCreateWithoutCompannyInput> | Company_ProductCreateWithoutCompannyInput[] | Company_ProductUncheckedCreateWithoutCompannyInput[]
-    connectOrCreate?: Company_ProductCreateOrConnectWithoutCompannyInput | Company_ProductCreateOrConnectWithoutCompannyInput[]
-    createMany?: Company_ProductCreateManyCompannyInputEnvelope
+  export type Company_ProductUncheckedCreateNestedManyWithoutCompanyInput = {
+    create?: XOR<Company_ProductCreateWithoutCompanyInput, Company_ProductUncheckedCreateWithoutCompanyInput> | Company_ProductCreateWithoutCompanyInput[] | Company_ProductUncheckedCreateWithoutCompanyInput[]
+    connectOrCreate?: Company_ProductCreateOrConnectWithoutCompanyInput | Company_ProductCreateOrConnectWithoutCompanyInput[]
+    createMany?: Company_ProductCreateManyCompanyInputEnvelope
     connect?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
   }
 
@@ -5311,17 +5325,17 @@ export namespace Prisma {
     set?: Date | string
   }
 
-  export type Company_ProductUpdateManyWithoutCompannyNestedInput = {
-    create?: XOR<Company_ProductCreateWithoutCompannyInput, Company_ProductUncheckedCreateWithoutCompannyInput> | Company_ProductCreateWithoutCompannyInput[] | Company_ProductUncheckedCreateWithoutCompannyInput[]
-    connectOrCreate?: Company_ProductCreateOrConnectWithoutCompannyInput | Company_ProductCreateOrConnectWithoutCompannyInput[]
-    upsert?: Company_ProductUpsertWithWhereUniqueWithoutCompannyInput | Company_ProductUpsertWithWhereUniqueWithoutCompannyInput[]
-    createMany?: Company_ProductCreateManyCompannyInputEnvelope
+  export type Company_ProductUpdateManyWithoutCompanyNestedInput = {
+    create?: XOR<Company_ProductCreateWithoutCompanyInput, Company_ProductUncheckedCreateWithoutCompanyInput> | Company_ProductCreateWithoutCompanyInput[] | Company_ProductUncheckedCreateWithoutCompanyInput[]
+    connectOrCreate?: Company_ProductCreateOrConnectWithoutCompanyInput | Company_ProductCreateOrConnectWithoutCompanyInput[]
+    upsert?: Company_ProductUpsertWithWhereUniqueWithoutCompanyInput | Company_ProductUpsertWithWhereUniqueWithoutCompanyInput[]
+    createMany?: Company_ProductCreateManyCompanyInputEnvelope
     set?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
     disconnect?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
     delete?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
     connect?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
-    update?: Company_ProductUpdateWithWhereUniqueWithoutCompannyInput | Company_ProductUpdateWithWhereUniqueWithoutCompannyInput[]
-    updateMany?: Company_ProductUpdateManyWithWhereWithoutCompannyInput | Company_ProductUpdateManyWithWhereWithoutCompannyInput[]
+    update?: Company_ProductUpdateWithWhereUniqueWithoutCompanyInput | Company_ProductUpdateWithWhereUniqueWithoutCompanyInput[]
+    updateMany?: Company_ProductUpdateManyWithWhereWithoutCompanyInput | Company_ProductUpdateManyWithWhereWithoutCompanyInput[]
     deleteMany?: Company_ProductScalarWhereInput | Company_ProductScalarWhereInput[]
   }
 
@@ -5333,17 +5347,17 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type Company_ProductUncheckedUpdateManyWithoutCompannyNestedInput = {
-    create?: XOR<Company_ProductCreateWithoutCompannyInput, Company_ProductUncheckedCreateWithoutCompannyInput> | Company_ProductCreateWithoutCompannyInput[] | Company_ProductUncheckedCreateWithoutCompannyInput[]
-    connectOrCreate?: Company_ProductCreateOrConnectWithoutCompannyInput | Company_ProductCreateOrConnectWithoutCompannyInput[]
-    upsert?: Company_ProductUpsertWithWhereUniqueWithoutCompannyInput | Company_ProductUpsertWithWhereUniqueWithoutCompannyInput[]
-    createMany?: Company_ProductCreateManyCompannyInputEnvelope
+  export type Company_ProductUncheckedUpdateManyWithoutCompanyNestedInput = {
+    create?: XOR<Company_ProductCreateWithoutCompanyInput, Company_ProductUncheckedCreateWithoutCompanyInput> | Company_ProductCreateWithoutCompanyInput[] | Company_ProductUncheckedCreateWithoutCompanyInput[]
+    connectOrCreate?: Company_ProductCreateOrConnectWithoutCompanyInput | Company_ProductCreateOrConnectWithoutCompanyInput[]
+    upsert?: Company_ProductUpsertWithWhereUniqueWithoutCompanyInput | Company_ProductUpsertWithWhereUniqueWithoutCompanyInput[]
+    createMany?: Company_ProductCreateManyCompanyInputEnvelope
     set?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
     disconnect?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
     delete?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
     connect?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
-    update?: Company_ProductUpdateWithWhereUniqueWithoutCompannyInput | Company_ProductUpdateWithWhereUniqueWithoutCompannyInput[]
-    updateMany?: Company_ProductUpdateManyWithWhereWithoutCompannyInput | Company_ProductUpdateManyWithWhereWithoutCompannyInput[]
+    update?: Company_ProductUpdateWithWhereUniqueWithoutCompanyInput | Company_ProductUpdateWithWhereUniqueWithoutCompanyInput[]
+    updateMany?: Company_ProductUpdateManyWithWhereWithoutCompanyInput | Company_ProductUpdateManyWithWhereWithoutCompanyInput[]
     deleteMany?: Company_ProductScalarWhereInput | Company_ProductScalarWhereInput[]
   }
 
@@ -5361,12 +5375,12 @@ export namespace Prisma {
     connect?: Company_ProductWhereUniqueInput | Company_ProductWhereUniqueInput[]
   }
 
-  export type FloatFieldUpdateOperationsInput = {
-    set?: number
-    increment?: number
-    decrement?: number
-    multiply?: number
-    divide?: number
+  export type DecimalFieldUpdateOperationsInput = {
+    set?: Decimal | DecimalJsLike | number | string
+    increment?: Decimal | DecimalJsLike | number | string
+    decrement?: Decimal | DecimalJsLike | number | string
+    multiply?: Decimal | DecimalJsLike | number | string
+    divide?: Decimal | DecimalJsLike | number | string
   }
 
   export type Company_ProductUpdateManyWithoutProductNestedInput = {
@@ -5397,32 +5411,32 @@ export namespace Prisma {
     deleteMany?: Company_ProductScalarWhereInput | Company_ProductScalarWhereInput[]
   }
 
-  export type CompanyCreateNestedOneWithoutCompanny_ProductInput = {
-    create?: XOR<CompanyCreateWithoutCompanny_ProductInput, CompanyUncheckedCreateWithoutCompanny_ProductInput>
-    connectOrCreate?: CompanyCreateOrConnectWithoutCompanny_ProductInput
+  export type CompanyCreateNestedOneWithoutCompanyProductInput = {
+    create?: XOR<CompanyCreateWithoutCompanyProductInput, CompanyUncheckedCreateWithoutCompanyProductInput>
+    connectOrCreate?: CompanyCreateOrConnectWithoutCompanyProductInput
     connect?: CompanyWhereUniqueInput
   }
 
-  export type ProductCreateNestedOneWithoutCompanny_ProductInput = {
-    create?: XOR<ProductCreateWithoutCompanny_ProductInput, ProductUncheckedCreateWithoutCompanny_ProductInput>
-    connectOrCreate?: ProductCreateOrConnectWithoutCompanny_ProductInput
+  export type ProductCreateNestedOneWithoutCompanyProductInput = {
+    create?: XOR<ProductCreateWithoutCompanyProductInput, ProductUncheckedCreateWithoutCompanyProductInput>
+    connectOrCreate?: ProductCreateOrConnectWithoutCompanyProductInput
     connect?: ProductWhereUniqueInput
   }
 
-  export type CompanyUpdateOneRequiredWithoutCompanny_ProductNestedInput = {
-    create?: XOR<CompanyCreateWithoutCompanny_ProductInput, CompanyUncheckedCreateWithoutCompanny_ProductInput>
-    connectOrCreate?: CompanyCreateOrConnectWithoutCompanny_ProductInput
-    upsert?: CompanyUpsertWithoutCompanny_ProductInput
+  export type CompanyUpdateOneRequiredWithoutCompanyProductNestedInput = {
+    create?: XOR<CompanyCreateWithoutCompanyProductInput, CompanyUncheckedCreateWithoutCompanyProductInput>
+    connectOrCreate?: CompanyCreateOrConnectWithoutCompanyProductInput
+    upsert?: CompanyUpsertWithoutCompanyProductInput
     connect?: CompanyWhereUniqueInput
-    update?: XOR<XOR<CompanyUpdateToOneWithWhereWithoutCompanny_ProductInput, CompanyUpdateWithoutCompanny_ProductInput>, CompanyUncheckedUpdateWithoutCompanny_ProductInput>
+    update?: XOR<XOR<CompanyUpdateToOneWithWhereWithoutCompanyProductInput, CompanyUpdateWithoutCompanyProductInput>, CompanyUncheckedUpdateWithoutCompanyProductInput>
   }
 
-  export type ProductUpdateOneRequiredWithoutCompanny_ProductNestedInput = {
-    create?: XOR<ProductCreateWithoutCompanny_ProductInput, ProductUncheckedCreateWithoutCompanny_ProductInput>
-    connectOrCreate?: ProductCreateOrConnectWithoutCompanny_ProductInput
-    upsert?: ProductUpsertWithoutCompanny_ProductInput
+  export type ProductUpdateOneRequiredWithoutCompanyProductNestedInput = {
+    create?: XOR<ProductCreateWithoutCompanyProductInput, ProductUncheckedCreateWithoutCompanyProductInput>
+    connectOrCreate?: ProductCreateOrConnectWithoutCompanyProductInput
+    upsert?: ProductUpsertWithoutCompanyProductInput
     connect?: ProductWhereUniqueInput
-    update?: XOR<XOR<ProductUpdateToOneWithWhereWithoutCompanny_ProductInput, ProductUpdateWithoutCompanny_ProductInput>, ProductUncheckedUpdateWithoutCompanny_ProductInput>
+    update?: XOR<XOR<ProductUpdateToOneWithWhereWithoutCompanyProductInput, ProductUpdateWithoutCompanyProductInput>, ProductUncheckedUpdateWithoutCompanyProductInput>
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -5519,61 +5533,72 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type NestedFloatWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: number | FloatFieldRefInput<$PrismaModel>
-    in?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    notIn?: number[] | ListFloatFieldRefInput<$PrismaModel>
-    lt?: number | FloatFieldRefInput<$PrismaModel>
-    lte?: number | FloatFieldRefInput<$PrismaModel>
-    gt?: number | FloatFieldRefInput<$PrismaModel>
-    gte?: number | FloatFieldRefInput<$PrismaModel>
-    not?: NestedFloatWithAggregatesFilter<$PrismaModel> | number
-    _count?: NestedIntFilter<$PrismaModel>
-    _avg?: NestedFloatFilter<$PrismaModel>
-    _sum?: NestedFloatFilter<$PrismaModel>
-    _min?: NestedFloatFilter<$PrismaModel>
-    _max?: NestedFloatFilter<$PrismaModel>
+  export type NestedDecimalFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string
   }
 
-  export type Company_ProductCreateWithoutCompannyInput = {
-    price: number
+  export type NestedDecimalWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    in?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    notIn?: Decimal[] | DecimalJsLike[] | number[] | string[] | ListDecimalFieldRefInput<$PrismaModel>
+    lt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    lte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gt?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    gte?: Decimal | DecimalJsLike | number | string | DecimalFieldRefInput<$PrismaModel>
+    not?: NestedDecimalWithAggregatesFilter<$PrismaModel> | Decimal | DecimalJsLike | number | string
+    _count?: NestedIntFilter<$PrismaModel>
+    _avg?: NestedDecimalFilter<$PrismaModel>
+    _sum?: NestedDecimalFilter<$PrismaModel>
+    _min?: NestedDecimalFilter<$PrismaModel>
+    _max?: NestedDecimalFilter<$PrismaModel>
+  }
+
+  export type Company_ProductCreateWithoutCompanyInput = {
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
-    product: ProductCreateNestedOneWithoutCompanny_ProductInput
+    product: ProductCreateNestedOneWithoutCompanyProductInput
   }
 
-  export type Company_ProductUncheckedCreateWithoutCompannyInput = {
+  export type Company_ProductUncheckedCreateWithoutCompanyInput = {
     id?: number
     productId: number
-    price: number
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type Company_ProductCreateOrConnectWithoutCompannyInput = {
+  export type Company_ProductCreateOrConnectWithoutCompanyInput = {
     where: Company_ProductWhereUniqueInput
-    create: XOR<Company_ProductCreateWithoutCompannyInput, Company_ProductUncheckedCreateWithoutCompannyInput>
+    create: XOR<Company_ProductCreateWithoutCompanyInput, Company_ProductUncheckedCreateWithoutCompanyInput>
   }
 
-  export type Company_ProductCreateManyCompannyInputEnvelope = {
-    data: Company_ProductCreateManyCompannyInput | Company_ProductCreateManyCompannyInput[]
+  export type Company_ProductCreateManyCompanyInputEnvelope = {
+    data: Company_ProductCreateManyCompanyInput | Company_ProductCreateManyCompanyInput[]
     skipDuplicates?: boolean
   }
 
-  export type Company_ProductUpsertWithWhereUniqueWithoutCompannyInput = {
+  export type Company_ProductUpsertWithWhereUniqueWithoutCompanyInput = {
     where: Company_ProductWhereUniqueInput
-    update: XOR<Company_ProductUpdateWithoutCompannyInput, Company_ProductUncheckedUpdateWithoutCompannyInput>
-    create: XOR<Company_ProductCreateWithoutCompannyInput, Company_ProductUncheckedCreateWithoutCompannyInput>
+    update: XOR<Company_ProductUpdateWithoutCompanyInput, Company_ProductUncheckedUpdateWithoutCompanyInput>
+    create: XOR<Company_ProductCreateWithoutCompanyInput, Company_ProductUncheckedCreateWithoutCompanyInput>
   }
 
-  export type Company_ProductUpdateWithWhereUniqueWithoutCompannyInput = {
+  export type Company_ProductUpdateWithWhereUniqueWithoutCompanyInput = {
     where: Company_ProductWhereUniqueInput
-    data: XOR<Company_ProductUpdateWithoutCompannyInput, Company_ProductUncheckedUpdateWithoutCompannyInput>
+    data: XOR<Company_ProductUpdateWithoutCompanyInput, Company_ProductUncheckedUpdateWithoutCompanyInput>
   }
 
-  export type Company_ProductUpdateManyWithWhereWithoutCompannyInput = {
+  export type Company_ProductUpdateManyWithWhereWithoutCompanyInput = {
     where: Company_ProductScalarWhereInput
-    data: XOR<Company_ProductUpdateManyMutationInput, Company_ProductUncheckedUpdateManyWithoutCompannyInput>
+    data: XOR<Company_ProductUpdateManyMutationInput, Company_ProductUncheckedUpdateManyWithoutCompanyInput>
   }
 
   export type Company_ProductScalarWhereInput = {
@@ -5581,24 +5606,24 @@ export namespace Prisma {
     OR?: Company_ProductScalarWhereInput[]
     NOT?: Company_ProductScalarWhereInput | Company_ProductScalarWhereInput[]
     id?: IntFilter<"Company_Product"> | number
-    compannyId?: IntFilter<"Company_Product"> | number
+    companyId?: IntFilter<"Company_Product"> | number
     productId?: IntFilter<"Company_Product"> | number
-    price?: FloatFilter<"Company_Product"> | number
+    price?: DecimalFilter<"Company_Product"> | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFilter<"Company_Product"> | Date | string
     updatedAt?: DateTimeFilter<"Company_Product"> | Date | string
   }
 
   export type Company_ProductCreateWithoutProductInput = {
-    price: number
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
-    companny: CompanyCreateNestedOneWithoutCompanny_ProductInput
+    company: CompanyCreateNestedOneWithoutCompanyProductInput
   }
 
   export type Company_ProductUncheckedCreateWithoutProductInput = {
     id?: number
-    compannyId: number
-    price: number
+    companyId: number
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -5629,7 +5654,7 @@ export namespace Prisma {
     data: XOR<Company_ProductUpdateManyMutationInput, Company_ProductUncheckedUpdateManyWithoutProductInput>
   }
 
-  export type CompanyCreateWithoutCompanny_ProductInput = {
+  export type CompanyCreateWithoutCompanyProductInput = {
     name: string
     document: string
     email: string
@@ -5638,7 +5663,7 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type CompanyUncheckedCreateWithoutCompanny_ProductInput = {
+  export type CompanyUncheckedCreateWithoutCompanyProductInput = {
     id?: number
     name: string
     document: string
@@ -5648,47 +5673,47 @@ export namespace Prisma {
     updatedAt?: Date | string
   }
 
-  export type CompanyCreateOrConnectWithoutCompanny_ProductInput = {
+  export type CompanyCreateOrConnectWithoutCompanyProductInput = {
     where: CompanyWhereUniqueInput
-    create: XOR<CompanyCreateWithoutCompanny_ProductInput, CompanyUncheckedCreateWithoutCompanny_ProductInput>
+    create: XOR<CompanyCreateWithoutCompanyProductInput, CompanyUncheckedCreateWithoutCompanyProductInput>
   }
 
-  export type ProductCreateWithoutCompanny_ProductInput = {
+  export type ProductCreateWithoutCompanyProductInput = {
     name: string
     description: string
-    base_price: number
+    base_price: Decimal | DecimalJsLike | number | string
     stock: number
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type ProductUncheckedCreateWithoutCompanny_ProductInput = {
+  export type ProductUncheckedCreateWithoutCompanyProductInput = {
     id?: number
     name: string
     description: string
-    base_price: number
+    base_price: Decimal | DecimalJsLike | number | string
     stock: number
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type ProductCreateOrConnectWithoutCompanny_ProductInput = {
+  export type ProductCreateOrConnectWithoutCompanyProductInput = {
     where: ProductWhereUniqueInput
-    create: XOR<ProductCreateWithoutCompanny_ProductInput, ProductUncheckedCreateWithoutCompanny_ProductInput>
+    create: XOR<ProductCreateWithoutCompanyProductInput, ProductUncheckedCreateWithoutCompanyProductInput>
   }
 
-  export type CompanyUpsertWithoutCompanny_ProductInput = {
-    update: XOR<CompanyUpdateWithoutCompanny_ProductInput, CompanyUncheckedUpdateWithoutCompanny_ProductInput>
-    create: XOR<CompanyCreateWithoutCompanny_ProductInput, CompanyUncheckedCreateWithoutCompanny_ProductInput>
+  export type CompanyUpsertWithoutCompanyProductInput = {
+    update: XOR<CompanyUpdateWithoutCompanyProductInput, CompanyUncheckedUpdateWithoutCompanyProductInput>
+    create: XOR<CompanyCreateWithoutCompanyProductInput, CompanyUncheckedCreateWithoutCompanyProductInput>
     where?: CompanyWhereInput
   }
 
-  export type CompanyUpdateToOneWithWhereWithoutCompanny_ProductInput = {
+  export type CompanyUpdateToOneWithWhereWithoutCompanyProductInput = {
     where?: CompanyWhereInput
-    data: XOR<CompanyUpdateWithoutCompanny_ProductInput, CompanyUncheckedUpdateWithoutCompanny_ProductInput>
+    data: XOR<CompanyUpdateWithoutCompanyProductInput, CompanyUncheckedUpdateWithoutCompanyProductInput>
   }
 
-  export type CompanyUpdateWithoutCompanny_ProductInput = {
+  export type CompanyUpdateWithoutCompanyProductInput = {
     name?: StringFieldUpdateOperationsInput | string
     document?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
@@ -5697,7 +5722,7 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type CompanyUncheckedUpdateWithoutCompanny_ProductInput = {
+  export type CompanyUncheckedUpdateWithoutCompanyProductInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     document?: StringFieldUpdateOperationsInput | string
@@ -5707,94 +5732,94 @@ export namespace Prisma {
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ProductUpsertWithoutCompanny_ProductInput = {
-    update: XOR<ProductUpdateWithoutCompanny_ProductInput, ProductUncheckedUpdateWithoutCompanny_ProductInput>
-    create: XOR<ProductCreateWithoutCompanny_ProductInput, ProductUncheckedCreateWithoutCompanny_ProductInput>
+  export type ProductUpsertWithoutCompanyProductInput = {
+    update: XOR<ProductUpdateWithoutCompanyProductInput, ProductUncheckedUpdateWithoutCompanyProductInput>
+    create: XOR<ProductCreateWithoutCompanyProductInput, ProductUncheckedCreateWithoutCompanyProductInput>
     where?: ProductWhereInput
   }
 
-  export type ProductUpdateToOneWithWhereWithoutCompanny_ProductInput = {
+  export type ProductUpdateToOneWithWhereWithoutCompanyProductInput = {
     where?: ProductWhereInput
-    data: XOR<ProductUpdateWithoutCompanny_ProductInput, ProductUncheckedUpdateWithoutCompanny_ProductInput>
+    data: XOR<ProductUpdateWithoutCompanyProductInput, ProductUncheckedUpdateWithoutCompanyProductInput>
   }
 
-  export type ProductUpdateWithoutCompanny_ProductInput = {
+  export type ProductUpdateWithoutCompanyProductInput = {
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    base_price?: FloatFieldUpdateOperationsInput | number
+    base_price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     stock?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ProductUncheckedUpdateWithoutCompanny_ProductInput = {
+  export type ProductUncheckedUpdateWithoutCompanyProductInput = {
     id?: IntFieldUpdateOperationsInput | number
     name?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
-    base_price?: FloatFieldUpdateOperationsInput | number
+    base_price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     stock?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Company_ProductCreateManyCompannyInput = {
+  export type Company_ProductCreateManyCompanyInput = {
     id?: number
     productId: number
-    price: number
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
-  export type Company_ProductUpdateWithoutCompannyInput = {
-    price?: FloatFieldUpdateOperationsInput | number
+  export type Company_ProductUpdateWithoutCompanyInput = {
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    product?: ProductUpdateOneRequiredWithoutCompanny_ProductNestedInput
+    product?: ProductUpdateOneRequiredWithoutCompanyProductNestedInput
   }
 
-  export type Company_ProductUncheckedUpdateWithoutCompannyInput = {
+  export type Company_ProductUncheckedUpdateWithoutCompanyInput = {
     id?: IntFieldUpdateOperationsInput | number
     productId?: IntFieldUpdateOperationsInput | number
-    price?: FloatFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type Company_ProductUncheckedUpdateManyWithoutCompannyInput = {
+  export type Company_ProductUncheckedUpdateManyWithoutCompanyInput = {
     id?: IntFieldUpdateOperationsInput | number
     productId?: IntFieldUpdateOperationsInput | number
-    price?: FloatFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type Company_ProductCreateManyProductInput = {
     id?: number
-    compannyId: number
-    price: number
+    companyId: number
+    price: Decimal | DecimalJsLike | number | string
     createdAt?: Date | string
     updatedAt?: Date | string
   }
 
   export type Company_ProductUpdateWithoutProductInput = {
-    price?: FloatFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
-    companny?: CompanyUpdateOneRequiredWithoutCompanny_ProductNestedInput
+    company?: CompanyUpdateOneRequiredWithoutCompanyProductNestedInput
   }
 
   export type Company_ProductUncheckedUpdateWithoutProductInput = {
     id?: IntFieldUpdateOperationsInput | number
-    compannyId?: IntFieldUpdateOperationsInput | number
-    price?: FloatFieldUpdateOperationsInput | number
+    companyId?: IntFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
   export type Company_ProductUncheckedUpdateManyWithoutProductInput = {
     id?: IntFieldUpdateOperationsInput | number
-    compannyId?: IntFieldUpdateOperationsInput | number
-    price?: FloatFieldUpdateOperationsInput | number
+    companyId?: IntFieldUpdateOperationsInput | number
+    price?: DecimalFieldUpdateOperationsInput | Decimal | DecimalJsLike | number | string
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }

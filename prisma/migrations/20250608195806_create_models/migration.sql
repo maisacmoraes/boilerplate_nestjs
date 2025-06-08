@@ -27,7 +27,7 @@ CREATE TABLE "Product" (
 -- CreateTable
 CREATE TABLE "Company_Product" (
     "id" SERIAL NOT NULL,
-    "compannyId" INTEGER NOT NULL,
+    "companyId" INTEGER NOT NULL,
     "productId" INTEGER NOT NULL,
     "price" DOUBLE PRECISION NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
@@ -37,7 +37,7 @@ CREATE TABLE "Company_Product" (
 );
 
 -- AddForeignKey
-ALTER TABLE "Company_Product" ADD CONSTRAINT "Company_Product_compannyId_fkey" FOREIGN KEY ("compannyId") REFERENCES "Company"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+ALTER TABLE "Company_Product" ADD CONSTRAINT "Company_Product_companyId_fkey" FOREIGN KEY ("companyId") REFERENCES "Company"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
 
 -- AddForeignKey
 ALTER TABLE "Company_Product" ADD CONSTRAINT "Company_Product_productId_fkey" FOREIGN KEY ("productId") REFERENCES "Product"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
