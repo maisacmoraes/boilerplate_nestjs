@@ -3,18 +3,7 @@ import { CompaniesController } from '../companies.controller';
 import { CompaniesService } from '../companies.service';
 import { PrismaService } from '../../database/prisma.service';
 import { Company } from '@prisma/client';
-
-const mockCompany: Company = {
-  id: 1,
-  name: 'Acme Corp',
-  document: '1234567890',
-  email: 'contact@acme.com',
-  phone: '+55 11 99999-9999',
-  createdAt: new Date(),
-  updatedAt: new Date(),
-};
-
-const id = mockCompany.id.toString();
+import { id, mockCompany } from './mocks';
 
 describe('CompaniesController', () => {
   let controller: CompaniesController;
