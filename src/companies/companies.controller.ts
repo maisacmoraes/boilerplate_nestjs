@@ -21,7 +21,7 @@ export class CompaniesController {
   }
 
   @Get()
-  async indAll() {
+  async findAll() {
     return await this.companiesService.findAll();
   }
 
