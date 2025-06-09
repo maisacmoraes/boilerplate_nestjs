@@ -2,16 +2,29 @@ import { Injectable, Logger } from '@nestjs/common';
 import { CreateProductDto } from './dto/create-product.dto';
 import { UpdateProductDto } from './dto/update-product.dto';
 import { PrismaService } from '../database/prisma.service';
+import { Decimal } from '@prisma/client/runtime/library';
 
 @Injectable()
 export class ProductsService {
   constructor(private readonly prisma: PrismaService) {}
   private readonly logger = new Logger(ProductsService.name);
 
-  async create(createProductDto: CreateProductDto) {
+  async create(
+    companyId: number,
+    price: Decimal,
+    createProductDto: CreateProductDto
+  ) {
     try {
       return await this.prisma.product.create({
-        data: createProductDto,
+        data: {
+          ...createProductDto,
+          companyProduct: {
+            create: {
+              companyId,
+              price,
+            },
+          },
+        },
       });
     } catch (error) {
       this.logger.error('Error creating product:', error);
@@ -21,7 +34,20 @@ export class ProductsService {
 
   async findAll() {
     try {
-      return await this.prisma.product.findMany();
+      return await this.prisma.product.findMany({
+        include: {
+          companyProduct: {
+            select: {
+              company: {
+                select: {
+                  id: true,
+                  name: true,
+                },
+              },
+            },
+          },
+        },
+      });
     } catch (error) {
       this.logger.error('Error fetching products:', error);
       throw new Error('Failed to fetch products');
@@ -32,6 +58,18 @@ export class ProductsService {
     try {
       return await this.prisma.product.findUnique({
         where: { id },
+        include: {
+          companyProduct: {
+            select: {
+              company: {
+                select: {
+                  id: true,
+                  name: true,
+                },
+              },
+            },
+          },
+        },
       });
     } catch (error) {
       this.logger.error(`Error fetching product with id ${id}:`, error);
