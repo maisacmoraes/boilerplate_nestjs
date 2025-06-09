@@ -2,7 +2,7 @@
   "name": "nest-app",
   "version": "0.0.1",
   "description": "",
-  "author": "",
+  "author": "Maisa Moraes",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
@@ -24,7 +24,8 @@
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
     "@nestjs/mapped-types": "*",
-    "@nestjs/platform-express": "^11.0.1"
+    "@nestjs/platform-express": "^11.0.1",
+    "@prisma/client": "^6.9.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
@@ -70,5 +71,10 @@
     ],
     "coverageDirectory": "../coverage",
     "testEnvironment": "node"
+  },
+  "prisma": {
+    "seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seeds/messages.seed.ts",
+    "studio": "npx prisma studio",
+    "reset": "npx prisma migrate reset"
   }
 }
